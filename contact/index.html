@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
-    <h1>this will be my contact page</h1>
-<nav><a href="../index.html">go back</a></nav>
+    <h1>Contact Habin</h1>
+    <ul>
+<li><nav><a href="../index.html">Back to Main</a></nav></li>
+<li><nav><a href="../projects/index.html">See Habin's Projects</a></nav></li>
+<li><nav><a href="../github profile/index.html">Habin's Github</a></nav></li>
+</ul>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <label for="email address">email</label>
-<input name="habin@mit.edu">
-<label for="subject">subject</label>
-<input name="subject">
-<label for="body">Please tell us about yourself</label>
-<textarea name="body" id="" cols="30" rows="10"></textarea>
-<button></button>
+    <form action=""method="get" class="form-example">
+        <div class="form-example">
+            <label for="name">Enter your name:</label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+            <label for="email">Enter your email:</label>
+            <input type="email" name="email" id="email" required />
+        </div>
+        
+       <p>Tell me about yourself:</p>
+    </form>
+    <form action="" method="post" enctype="text/plain">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div class="form-example">
+            <input type="submit" value="Submit!">
+
+        </div>
+    </form>
+
 
 </body>
 </html>
