@@ -1,7 +1,98 @@
+li {
+    display:contents;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.current {
+    border-bottom: 0.4em solid oklch(65% 50% 0);
+}
+li nav {
+    display: flex;
+}
+li nav a { 
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 2.5em;
+    margin-bottom: 20px; /* Adjust as needed */
+    border-bottom: 1px solid oklch(80% 3% 200);
+    padding-bottom: 0em;
+    
+}
+
+:root {
+    --color-accent: oklch(70% 0.1 338);
+}
+html {
+    accent-color: var(--color-accent);
+}
+nav a:hover {
+    border-bottom: 0.4em solid var(--color-accent);
+}
 
 body{
     /* Set line height to 1.5 times the font size
     and use the OS's UI font as the website font
     */
     font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: max(1em, (100% - 100ch)/2);
+    writing-mode: horizontal-tb;
+    padding: 2em;
 }
+
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+}
+label {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1; /* Span the whole row */
+}
+input, textarea, button {
+    font: inherit;
+}
+input, textarea, button, label {
+    display: block;
+}
+label, input {
+    width: 100%;
+    box-sizing: border-box;
+}
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.projects {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1em;
+}
+
+.projects article {
+    display: grid;
+    grid-template-rows: subgrid; /*Align rows with parent grid */
+    grid-row: span 3; /* Span 3 rows without specifying starting row */
+}
+
+.projects article h2 {
+    margin: 0; /* Remove default margin for h2 elements */
+}
+
+h1 {
+    font-size: 400%; /* Adjust as needed for significant contrast */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1; /* Ensure consistent spacing between lines */
+    text-wrap: balance; /* Prevent uneven lines */
+}
+
