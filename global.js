@@ -15,12 +15,24 @@ let pages = [
 let nav = document.createElement("nav");
 document.body.prepend(nav);
 
-for (let p of pages) {
-	let url = p.url;
-	let title = p.title;
-	nav.insertAdjacentHTML("beforeend", `<a href="${ url }">${ title }</a>` );
-}
+
 const ARE_WE_HOME = document.documentElement.classList.contains("home");
 url = !ARE_WE_HOME && !url.startsWith("http") ? "../" + url : url;
 
 
+for (let p of pages) {
+	let url = p.url;
+	let title = p.title;
+	let a = document.createElement("a");
+	a.href = p.url;
+	a.textContent = p.title;
+	nav.append(a);
+
+	// Highlight the current page
+	a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
+
+	// Open external links in a new tab
+	if (a.host !== location.host) {
+		a.target = "_blank";
+	}
+}
