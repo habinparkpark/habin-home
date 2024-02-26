@@ -96,3 +96,8 @@ h1, h2, h3, h4, h5, h6 {
     text-wrap: balance; /* Prevent uneven lines */
 }
 
+html {
+    color-scheme: light dark; /* Allow rendering in both light and dark modes */
+    background-color: canvas; /* Use system-defined background color */
+    color: canvastext; /* Use system-defined text color */
+}
