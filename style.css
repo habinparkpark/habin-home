@@ -6,19 +6,20 @@ li {
     flex-direction: row;
 }
 .current {
-    border-bottom: 0.4em solid oklch(65% 50% 0);
+    border-bottom: 0.4em solid oklch(50% 10% 200 / 40%);
 }
-li nav {
+nav {
     display: flex;
+    --border-color: oklch(50% 10% 200 / 40%);
 }
-li nav a { 
+nav a { 
     flex: 1;
     text-decoration: none;
     color: inherit;
     text-align: center;
     padding: 2.5em;
     margin-bottom: 20px; /* Adjust as needed */
-    border-bottom: 1px solid oklch(80% 3% 200);
+    border-bottom: 1px solid oklch(50% 10% 200 / 40%);
     padding-bottom: 0em;
     
 }
@@ -69,8 +70,8 @@ textarea {
     box-sizing: border-box;
 }
 
-
-.projects {
+/*Projects*/
+    .projects {
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -98,6 +99,14 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
     color-scheme: light dark; /* Allow rendering in both light and dark modes */
-    background-color: canvas; /* Use system-defined background color */
+    background-color: Canvas; /* Use system-defined background color */
     color: canvastext; /* Use system-defined text color */
 }
+
+/*Color Scheme*/
+:root {
+    color-scheme: light dark;
+}
+
+
+
